@@ -1,4 +1,4 @@
-import React,{ useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import {
   View,
   Text,
@@ -6,126 +6,126 @@ import {
   StyleSheet,
   Dimensions,
   Linking,
-} from 'react-native';
-import { Button, useTheme, ActivityIndicator } from 'react-native-paper';
-import type { Theme } from '../../theme/them.types';
-import { FAQAccordion } from '../../components/HelpAccordion';
-import { useTranslation } from 'react-i18next';
-import ProgressBar from '../../components/baseComponents/ProgressBar';
-import { useOBServices } from '../../services/useOBServices';
-import apiConfig from '../../config';
+} from 'react-native'
+import { Button, useTheme, ActivityIndicator } from 'react-native-paper'
+import type { Theme } from '../../theme/them.types'
+import { FAQAccordion } from '../../components/HelpAccordion'
+import { useTranslation } from 'react-i18next'
+import ProgressBar from '../../components/baseComponents/ProgressBar'
+import { useOBServices } from '../../services/useOBServices'
+import apiConfig from '../../config'
 
-import BankCard from '../../components/baseComponents/BankCard/BankCard';
-import Header from '../../components/baseComponents/Header/Header';
-const { width } = Dimensions.get('window');
+import BankCard from '../../components/baseComponents/BankCard/BankCard'
+import Header from '../../components/baseComponents/Header/Header'
+const { width } = Dimensions.get('window')
 interface BankInstitution {
-  nameEn: string;
-  nameAr: string;
-  id: string;
+  nameEn: string
+  nameAr: string
+  id: string
 }
 
 export function AddNewAccountScreen() {
-  const { i18n } = useTranslation();
+  const { i18n } = useTranslation()
 
   // const navigation = useNavigation();
-  const { t } = useTranslation();
-  const { colors } = useTheme<Theme>();
-  const [step, setStep] = useState(1);
+  const { t } = useTranslation()
+  const { colors } = useTheme<Theme>()
+  const [step, setStep] = useState(1)
   // const [provider, setProvider] = useState('');
 
-  const [selectedBank, setSelectedBank] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [selectedBank, setSelectedBank] = useState<string | null>(null)
+  const [loading, setLoading] = useState(false)
   const { getFinancialInstitutions, getInstitutionDataGroups } =
-    useOBServices(apiConfig);
-  const [institutions, setInstitutions] = useState<BankInstitution[]>([]);
-  const [dataGroups, setDataGroups] = useState<any>([]);
+    useOBServices(apiConfig)
+  const [institutions, setInstitutions] = useState<BankInstitution[]>([])
+  const [dataGroups, setDataGroups] = useState<any>([])
 
-  const isRtl = i18n.dir() === 'rtl';
-  type Language = 'ar' | 'en';
-  const language: Language = isRtl ? 'ar' : 'en';
+  const isRtl = i18n.dir() === 'rtl'
+  type Language = 'ar' | 'en'
+  const language: Language = isRtl ? 'ar' : 'en'
 
   useEffect(() => {
     const fetchInstitutions = async () => {
-      setLoading(true);
+      setLoading(true)
       try {
-        const institutionsData = await getFinancialInstitutions();
+        const institutionsData = (await getFinancialInstitutions()) as any
         const institutionsList = institutionsData.Data.FinancialInstitution.map(
           (bank) => ({
             nameEn: bank.FinancialInstitutionName.NameEn,
             nameAr: bank.FinancialInstitutionName.NameAr,
             id: bank.FinancialInstitutionId,
           })
-        );
-        setInstitutions(institutionsList);
+        )
+        setInstitutions(institutionsList)
       } catch (error) {
-        console.error('Error fetching institutions:', error);
+        console.error('Error fetching institutions:', error)
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
-    };
+    }
 
-    fetchInstitutions();
-  }, []);
+    fetchInstitutions()
+  }, [])
 
   useEffect(() => {
     const fetchDataGroups = async () => {
-      if (institutions.length === 0) return;
-      setLoading(true);
+      if (institutions.length === 0) return
+      setLoading(true)
       try {
         const dataGroupsResponses = await Promise.all(
           institutions.map(() => getInstitutionDataGroups())
-        );
+        )
         const uniqueDataGroups = Array.from(
           new Set(dataGroupsResponses.flat().map((group) => group.DataGroupId))
         ).map((id) =>
           dataGroupsResponses.flat().find((group) => group.DataGroupId === id)
-        );
-        setDataGroups(uniqueDataGroups);
+        )
+        setDataGroups(uniqueDataGroups)
       } catch (error) {
-        console.error('Error fetching data groups:', error);
+        console.error('Error fetching data groups:', error)
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
-    };
-    fetchDataGroups();
-  }, [institutions]);
+    }
+    fetchDataGroups()
+  }, [institutions])
 
   if (loading) {
     return (
       <View style={styles.loaderContainer}>
-        <ActivityIndicator size="large" color={colors?.primary} />
+        <ActivityIndicator size='large' color={colors?.primary} />
         <Text style={styles.loaderText}>{t('loading')}</Text>
       </View>
-    );
+    )
   }
 
   const handleNextStep = async () => {
     if (step === 2) {
-      setLoading(true);
+      setLoading(true)
       setTimeout(() => {
-        Linking.openURL('https://auth-sb.alfransi.com.sa/perry/login');
-        setLoading(false);
-      }, 5000);
+        Linking.openURL('https://auth-sb.alfransi.com.sa/perry/login')
+        setLoading(false)
+      }, 5000)
     } else if (step < 3) {
-      setStep(step + 1);
+      setStep(step + 1)
     }
-  };
+  }
 
   const handlePreviousStep = () => {
     // navigation.goBack();
-    if (step > 1) setStep(step - 1);
-  };
+    if (step > 1) setStep(step - 1)
+  }
 
   const handleBankSelect = (bank: string) => {
-    setSelectedBank(bank === selectedBank ? null : bank);
-  };
+    setSelectedBank(bank === selectedBank ? null : bank)
+  }
 
   return (
     <>
       <Header
         title={t('provider.select')}
         leftIcon={'back'}
-        backgroundColor={"white"}
+        backgroundColor={'white'}
       />
       <View style={styles.container}>
         <ProgressBar step={step} />
@@ -221,7 +221,7 @@ export function AddNewAccountScreen() {
 
         <View style={styles.buttonContainer}>
           <Button
-            mode="contained"
+            mode='contained'
             onPress={handleNextStep}
             contentStyle={styles.buttonContent}
             style={[
@@ -243,7 +243,7 @@ export function AddNewAccountScreen() {
           </Button>
 
           <Button
-            mode="contained"
+            mode='contained'
             onPress={handlePreviousStep}
             contentStyle={styles.buttonContent}
             style={[
@@ -267,7 +267,7 @@ export function AddNewAccountScreen() {
         </View>
       </View>
     </>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -351,6 +351,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#555',
   },
-});
+})
 
-export default AddNewAccountScreen;
+export default AddNewAccountScreen

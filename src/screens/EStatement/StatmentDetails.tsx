@@ -1,41 +1,37 @@
-import React,{
+import React, {
   View,
   Text,
   StyleSheet,
   FlatList,
   type ListRenderItem,
-} from 'react-native';
-import {
-  FC
-} from 'react';
-import { Icon, useTheme } from 'react-native-paper';
+} from 'react-native'
+import { FC } from 'react'
+import { Icon, useTheme } from 'react-native-paper'
 
-
-import type { Theme } from '../../theme/them.types';
-import Header from '../../components/baseComponents/Header/Header';
-import { HP, WP } from '../../utils/helper';
-import type { Double } from 'react-native/Libraries/Types/CodegenTypes';
-import { getEstatmentDetails } from '../../sampleData/E_STATMENT';
-import moment from 'moment';
+import type { Theme } from '../../theme/them.types'
+import Header from '../../components/baseComponents/Header/Header'
+import { HP, WP } from '../../utils/helper'
+import { getEstatmentDetails } from '../../sampleData/E_STATMENT'
+import moment from 'moment'
 
 type CardItem = {
-  id: string;
-  TransactionType: string;
-  SubTransactionType: string;
-  TransactionDateTime: string;
-  CreditDebitIndicator: string;
-  Currency: string;
-  Amount: Double;
-  TransactionTypeDescription: string;
-  SubTransactionTypeDescription: string;
-  Balance: Double;
-  TransactionHijriDate: string;
-  Notes: string[];
-  NotesDescription: string[];
-};
+  id: string
+  TransactionType: string
+  SubTransactionType: string
+  TransactionDateTime: string
+  CreditDebitIndicator: string
+  Currency: string
+  Amount: string
+  TransactionTypeDescription: string
+  SubTransactionTypeDescription: string
+  Balance: string
+  TransactionHijriDate: string
+  Notes: string[]
+  NotesDescription: string[]
+}
 
 const StatmentDetails: FC = () => {
-  const { colors } = useTheme<Theme>();
+  const { colors } = useTheme<Theme>()
 
   // const { generateTokenService, getAccountLinkAccountsDetails } = useOBServices(apiConfig);
   const RowComponent = ({
@@ -43,9 +39,9 @@ const StatmentDetails: FC = () => {
     description,
     icon,
   }: {
-    title: String;
-    description: String;
-    icon: String;
+    title: String
+    description: String
+    icon: String
   }) => {
     return (
       <View
@@ -56,15 +52,15 @@ const StatmentDetails: FC = () => {
         }}
       >
         <View style={{ flexDirection: 'row' }}>
-          <Icon source={icon} size={18} color="black" />
+          <Icon source={icon} size={18} color='black' />
           <Text style={{ marginHorizontal: WP(1) }}>{title}</Text>
         </View>
         <Text style={{ textAlign: 'right', maxWidth: WP(50) }}>
           {description}
         </Text>
       </View>
-    );
-  };
+    )
+  }
   const renderItem: ListRenderItem<CardItem> = ({ item }) => (
     <View
       style={{
@@ -109,10 +105,10 @@ const StatmentDetails: FC = () => {
         icon={'reload'}
       />
     </View>
-  );
+  )
 
   const filteredProducts = getEstatmentDetails.Data.EStatement
-    .Transactions as CardItem[];
+    .Transactions as any
 
   const ListHeaderComponent = () => {
     return (
@@ -160,8 +156,8 @@ const StatmentDetails: FC = () => {
         </View>
         <Text style={{ marginVertical: WP(2) }}>Transaction Info</Text>
       </>
-    );
-  };
+    )
+  }
   return (
     <View style={[styles.container, { backgroundColor: colors?.Background }]}>
       <Header title={'Statment Details'} leftIcon={'back'} />
@@ -174,8 +170,8 @@ const StatmentDetails: FC = () => {
         numColumns={1}
       />
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -252,6 +248,6 @@ const styles = StyleSheet.create({
     marginTop: 8,
     fontSize: 16,
   },
-});
+})
 
-export default StatmentDetails;
+export default StatmentDetails

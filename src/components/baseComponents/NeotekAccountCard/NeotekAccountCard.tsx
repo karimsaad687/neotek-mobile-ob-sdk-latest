@@ -87,7 +87,7 @@ export function NeotekAccountCard({
         <View
           style={{
             flexDirection: i18n?.language == "ar" ? 'row-reverse':'row',
-            columnGap: WP(2),
+       
             alignItems: 'center',
           }}
         >
