@@ -1,10 +1,13 @@
-import {
+import React,{
   View,
   Text,
   StyleSheet,
   FlatList,
   type ListRenderItem,
 } from 'react-native';
+import {
+  FC
+} from 'react';
 import { Icon, useTheme } from 'react-native-paper';
 
 
@@ -31,7 +34,7 @@ type CardItem = {
   NotesDescription: string[];
 };
 
-const StatmentDetails: React.FC = () => {
+const StatmentDetails: FC = () => {
   const { colors } = useTheme<Theme>();
 
   // const { generateTokenService, getAccountLinkAccountsDetails } = useOBServices(apiConfig);

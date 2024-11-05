@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native';
+import React,{ Text, View } from 'react-native';
 import { HP, WP } from '../../../utils/helper';
 import { useTheme } from 'react-native-paper';
 import type { Theme } from '../../../theme/them.types';

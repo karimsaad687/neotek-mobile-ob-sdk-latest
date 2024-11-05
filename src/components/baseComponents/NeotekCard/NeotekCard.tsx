@@ -49,7 +49,6 @@ const NeotekCard: React.FC<CardProps> = ({
               },
             ]}
           >
-            <Title />
           </Text>
           <Text
             style={[

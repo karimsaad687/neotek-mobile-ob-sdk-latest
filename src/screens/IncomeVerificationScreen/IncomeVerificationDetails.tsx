@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, FlatList } from 'react-native';
+import React,{ StyleSheet, View, Text, FlatList } from 'react-native';
 import { useTheme } from 'react-native-paper';
 import type { Theme } from '../../theme/them.types';
 import { useEffect, useState } from 'react';
