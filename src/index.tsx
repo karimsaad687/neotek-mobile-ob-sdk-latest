@@ -1,26 +1,16 @@
-import * as React from 'react'
-import { Button, NativeModules, StyleSheet, Text, View } from 'react-native'
+/* eslint-disable prettier/prettier */
 
-export const addOne = (input: number) => input + 1
+import NeotekOB from './navigation/Navigation';
+import themes from './theme/theme';
+import type { Theme } from './theme/them.types';
+import i18n from './i18n';
 
-export const Counter = () => {
-  const [count, setCount] = React.useState(0)
+const { dark: darkTheme, light: lightTheme } = themes;
 
-  return (
-    <View style={styles.container}>
-      <Text>You pressed {count} times</Text>
-      <Button onPress={() => setCount(addOne(count))} title='Press Me' />
-    </View>
-  )
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: 200,
-  },
-})
+export const changeLanguage = async (lang: 'en' | 'ar') => {
+  await i18n.changeLanguage(lang);
+};
 
-export default NativeModules.NeoTekSdkModule
+export { NeotekOB, darkTheme, lightTheme };
+export type { Theme };

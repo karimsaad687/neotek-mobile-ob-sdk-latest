@@ -1,0 +1,163 @@
+{
+  "home": "Home",
+  "neotek_iban_container": "Neotek IBAN Container",
+  "iban_verification": "IBAN Verification",
+  "bulk_verification": "Bulk Verification",
+  "alias_inquiry": "Alias Inquiry",
+  "ob_connect": "Open Banking Connect",
+  "result_screen": "Result Screen",
+  "national_id": "National ID",
+  "iqa": "Iqama",
+  "iban_required": "IBAN is required",
+  "id_required": "ID is required",
+  "id_type_required": "ID Type is required",
+  "enter_iban": "IBAN Number",
+  "enter_id": "ID Number",
+  "select_id_type": "Select ID Type",
+  "verify": "Verify",
+  "iban": "IBAN",
+  "id": "ID",
+  "id_type": "ID Type",
+  "valid": "Valid",
+  "valid_iban": "Valid IBAN",
+  "invalid_iban": "Invalid IBAN",
+  "verification_failed":"Verification failed",
+  "bottomsheet":"Select an Option",
+
+
+
+  "step": {
+    "consent": "Consent",
+    "authenticate": "Authenticate",
+    "complete": "Complete"
+  },
+  "provider": {
+    "select": "Connect your account",
+    "transfer_message": "We will transfer you to your provider.",
+    "enter_placeholder": "Enter Account Provider",
+    "or": "Or",
+    "select_from_list": "Select from the list below"
+  },
+  "account": {
+    "title": "Account",
+    "connect_title": "Connect Your Account(s)",
+    "connect_message": "To use this service, we need to access information from your accounts at Alinma Bank.",
+    "confirmation_text": "Continue to Alinma Bank to share your account information under these terms?",
+    "success_message": "Your account has been successfully connected!",
+    "manage": "Manage Account"
+  },
+  "faq": {
+    "share_reason": "Why do we need you to share?",
+    "share_explanation": "To provide you a one place to manage your accounts across all banks.",
+    "account_details": "Your Account Details",
+    "account_details_explanation": "Account name, number, and balance are required.",
+    "regular_payments": "Your Regular Payments",
+    "regular_payments_explanation": "Details of your standing orders, direct debits, and recurring payments.",
+    "account_transactions": "Your Account Transactions",
+    "account_transactions_explanation": "Details of your incoming and outgoing transactions.",
+    "contact_details": "Contact and Party Details",
+    "contact_details_explanation": "Your full legal name, address, and contact details."
+  },
+  "loadingMessage": "We are securely transferring you to SAMA Model Bank",
+  "button": {
+
+    "Verify_another_IBAN":"Verify another IBAN",
+    "back": "Back",
+    "continue": "Continue",
+    "finish": "Finish",
+    "newAccount": "New Account",
+    "filter": "Filter",
+    "request": "Request Statment",
+    "verfiy": "Verify",
+    "done": "Done",
+    "close": "Close"
+
+  },
+  "status": {
+    "title":"Status",
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "transaction_from": "Transaction From",
+  "accountId": "Account ID",
+  "accountLinkId": "Account Link ID",
+  "expiry_date": "Expiry Date",
+  "manage": "Manage",
+  "transaction": {
+    "from": "Transaction From",
+    "expiry_date": "Expiry Date"
+  },
+  "back": "Back",
+  "iban_verification_TITLE": "Fill information details",
+  "iban_verification_description": "Quickly and reliably verify single or multiple IBANs.",
+  "ob_connect_description": "Manage customer consent for Open Banking easily and build trust.",
+  "income_verification_description": "Verify income details in minutes, more efficient processing.",
+  "connected_accounts": "Connected Accounts",
+  "connected_account_details": "Connected Account Details",
+  "data_we_get": "Data We Get",
+  "disconnect": "Disconnect",
+  "progress": {
+    "consent": "Consent",
+    "authenticate": "Authenticate",
+    "complete": "Complete"
+  },
+  "loading": "Loading...",
+  "edit": "Edit",
+  "addloading": {
+    "message": "Loading..."
+  },
+  "aaaccount": {
+    "select": "Select account",
+    "connect_title": "Connect Your Account",
+    "connect_message": "Please connect your account securely.",
+    "confirmation_text": "Please confirm your information.",
+    "success_message": "Your account has been successfully connected."
+  },
+  "aabutton": {
+    "finish": "Finish",
+    "continue": "Continue"
+  },
+  "error": {
+    "no_institutions": "No institutions available"
+  },
+  "account_support": {
+    "message": "If your account supports it, we will securely transfer you to your banking app to authenticate this connection."
+  },
+  "save": "Save",
+  "income_verification": {
+    "title": "Income Verification",
+    "connect_account": "Connect Account",
+    "income_verification_details": {
+      "title": "Income Verification Details",
+      "customer_name": "Customer Name",
+      "last_month_salary": "Last Month Salary",
+      "average_salary": "Average Salary",
+      "last_divided_amount": "Last Dividend Amount",
+      "average_dividend": "Average Dividend",
+      "previous_salary_amount": "Previous Salary Amount",
+      "account": "Account"
+    }
+  },
+  "single_api": {
+    "title": "Single Api",
+    "single_api_desc": "The Single API allows seamless access to financial data through advanced user profile management and consent."
+
+
+  },
+  "e_statements": {
+    "title": "E-statement",
+    "subtitle": "Where you can request your e-statements instantly",
+    "desc": "Give users access to up to 24 months of enhanced transaction history",
+    "request_statement": "Request statement"
+  },
+  "revoked": "Revoked",
+  "pending": "Pending",
+  "active": "Active",
+  "filter": {
+    "title": "filter",
+    "transaction_from": "Transaction From",
+    "transaction_to": "Transaction To",
+    "transaction_from_amount": "Transaction From Amount",
+    "transaction_to_amount": "Transaction To Amount"
+  }
+}

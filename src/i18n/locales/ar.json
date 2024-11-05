@@ -1,0 +1,175 @@
+{
+  "home": "الرئيسية",
+  "neotek_iban_container": "حاوية IBAN نوتيك",
+  "iban_verification": "التحقق من IBAN",
+  "bulk_verification": "التحقق بالجملة",
+  "alias_inquiry": "استفسار عن الاسم المستعار",
+  "ob_connect": "الاتصال بالمصارف المفتوحة",
+  "result_screen": "شاشة النتائج",
+  "national_id": "الهوية الوطنية",
+  "iqa": "اقامه",
+  "iban_required": "رقم IBAN مطلوب",
+  "id_required": "رقم الهوية مطلوب",
+  "id_type_required": "نوع الهوية مطلوب",
+  "enter_iban": "رقم IBAN",
+  "enter_id": "رقم الهوية",
+  "select_id_type": "اختر نوع الهوية",
+  "verify": "تحقق",
+  "iban": "IBAN",
+  "id": "الهوية",
+  "id_type": "نوع الهوية",
+  "valid": "صالح",
+  "valid_iban": "IBAN صالح",
+  "invalid_iban": "IBAN غير صالح",
+  "verification_failed":"فشل التحقق",
+"bottomsheet":"حدد الاختيار",
+
+  "step": {
+    "consent": "موافقة",
+    "authenticate": "التحقق",
+    "complete": "اكتمل"
+  },
+
+  "provider": {
+    "select": "قم بتوصيل حسابك",
+    "transfer_message": "سوف نقوم بنقلك إلى مزود الخدمة.",
+    "enter_placeholder": "أدخل مزود الحساب",
+    "or": "أو",
+    "select_from_list": "اختر من القائمة أدناه"
+  },
+
+  "account": {
+    "title": "الحساب",
+    "connect_title": "قم بتوصيل حسابك (حساباتك)",
+    "connect_message": "لاستخدام هذه الخدمة، نحتاج إلى الوصول إلى المعلومات من حساباتك في بنك الإنماء.",
+    "confirmation_text": "هل ترغب في الاستمرار إلى بنك الإنماء لمشاركة معلومات حسابك بموجب هذه الشروط؟",
+    "success_message": "تم توصيل حسابك بنجاح!",
+    "manage": "إدارة الحساب"
+  },
+
+  "faq": {
+    "share_reason": "لماذا نحتاج منك المشاركة؟",
+    "share_explanation": "لتوفير مكان واحد لإدارة حساباتك عبر جميع البنوك.",
+    "account_details": "تفاصيل حسابك",
+    "account_details_explanation": "اسم الحساب، الرقم، والرصيد مطلوب.",
+    "regular_payments": "مدفوعاتك العادية",
+    "regular_payments_explanation": "تفاصيل أوامرك الثابتة، الخصومات المباشرة، والمدفوعات المتكررة.",
+    "account_transactions": "معاملات حسابك",
+    "account_transactions_explanation": "تفاصيل المعاملات الواردة والصادرة.",
+    "contact_details": "تفاصيل الاتصال والأطراف",
+    "contact_details_explanation": "اسمك القانوني الكامل، العنوان، وتفاصيل الاتصال."
+  },
+
+  "loadingMessage": "نحن ننقلك بأمان إلى بنك SAMA Model",
+  "button": {
+
+    "Verify_another_IBAN":"التحقق من IBAN اخر",
+
+    "back": "رجوع",
+    "continue": "استمرار",
+    "finish": "إنهاء",
+    "newAccount": "حساب جديد",
+    "filter": "تصفية",
+    "request": "طلب كشف حساب",
+    "verfiy": "تحقق",
+    "done": "تم",
+    "close": "اغلاق"
+
+  },
+
+  "status": {
+    "title":"الحالة",
+    "active": "نشط",
+    "inactive": "غير نشط"
+  },
+  "transaction_from": "المعاملة من",
+  "accountId": "معرف الحساب",
+  "accountLinkId": "معرف رابط الحساب",
+  "expiry_date": "تاريخ الانتهاء",
+  "manage": "إدارة",
+  "transaction": {
+    "from": "المعاملة من",
+    "expiry_date": "تاريخ الانتهاء"
+  },
+
+  "back": "رجوع",
+
+  "iban_verification_TITLE": "املأ تفاصيل المعلومات",
+  "iban_verification_description": "تحقق من IBAN واحد أو أكثر بسرعة وموثوقية.",
+  "ob_connect_description": "قم بإدارة موافقة العملاء على المصارف المفتوحة بسهولة وبناء الثقة.",
+  "income_verification_description": "تحقق من تفاصيل الدخل في دقائق، معالجة أكثر كفاءة.",
+  "connected_accounts": "الحسابات المتصلة",
+  "connected_account_details": "تفاصيل الحساب المتصل",
+  "data_we_get": "البيانات التي نحصل عليها",
+  "disconnect": "فصل",
+  "progress": {
+    "consent": "موافقة",
+    "authenticate": "التحقق",
+    "complete": "اكتمل"
+  },
+
+  "loading": "جارٍ التحميل...",
+  "edit": "تحرير",
+
+  "addloading": {
+    "message": "جارٍ التحميل..."
+  },
+
+  "aaaccount": {
+    "select": "اختر حساباً",
+
+    "connect_title": "قم بتوصيل حسابك",
+    "connect_message": "يرجى توصيل حسابك بأمان.",
+    "confirmation_text": "يرجى تأكيد معلوماتك.",
+    "success_message": "تم توصيل حسابك بنجاح."
+  },
+
+  "aabutton": {
+    "finish": "إنهاء",
+    "continue": "استمرار"
+  },
+  "error": {
+    "no_institutions": "لا توجد مؤسسات متاحة"
+  },
+  "account_support": {
+    "message": "إذا كان حسابك يدعمه، فسوف نقوم بنقلك بأمان إلى تطبيق البنك الخاص بك للتحقق من هذا الاتصال."
+  },
+
+  "save": "حفظ",
+
+  "income_verification": {
+    "title": "التحقق من الدخل",
+    "connect_account": "الاتصال بحساب",
+    "income_verification_details": {
+      "title": "تفاصيل التحقق من الدخل",
+      "customer_ame": "اسم العميل",
+      "last_month_salary": "راتب الشهر الماضي",
+      "average_salary": "متوسط الراتب",
+      "last_divided_amount": "مبلغ التوزيع الأخير",
+      "average_dividend": "متوسط ​​توزيعات الأرباح",
+      "previous_salary_amount": "مبلغ الراتب السابق",
+      "account":"الحساب"
+
+    }
+  },
+  "single_api":{
+    "title": "واجهة برمجة تطبيقات واحدة",
+    "single_api_desc": "تتيح واجهة برمجة التطبيقات الموحدة الوصول السلس إلى البيانات المالية من خلال إدارة متقدمة لملفات تعريف المستخدم والموافقة."
+  },
+  "e_statements": {
+    "title": "كشف حساب إلكتروني",
+    "subtitle": "حيث يمكنك طلب كشوف الحسابات الإلكترونية الخاصة بك على الفور",
+    "desc": "امنح المستخدمين إمكانية الوصول إلى ما يصل إلى 24 شهرًا من سجل المعاملات المحسّن",
+    "request_statement": "اطلب كشف حساب إلكتروني"
+  },
+  "Revoked": "تم إلغاؤه",
+  "Pending": "قيد الانتظار",
+  "Active": "مفعل",
+  "filter": {
+      "title":"تصفية",
+      "transaction_from": "التحويلات من ",
+      "transaction_to": "التحويلات الي",
+      "transaction_from_amount":"المعاملة من مبلغ",
+      "transaction_to_amount":"المعاملة إلى مبلغ"
+    }
+}
